@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel='stylesheet' href='/stylesheets/style.css' />
+<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' />
+<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' />
+<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body style="background-color: white;">
+<center>
+
+<h2><%= title_1 %></h2>
+
+<p style="color:red;">
+<% if(title_2!='') { %>
+<%= title_2%>
+<% } %>
+</p>
+
+
+<form action="/signup" method="POST">
+<label>username:</label>
+<input type="text" name="uname" required>
+<br>
+<br>
+<label>email:</label>
+<input type="text" name="email" required>
+<br>
+<br>
+<label>pswd:</label>
+<input type="password" name="pswd" required>
+<br>
+<br>
+<label>c_pswd:</label>
+<input type="password" name="c_pswd" required>
+<br>
+<br>
+<button>submit</button>
+</form>
+<br>
+<br>
+<p>if you already have an account then <a href="/login">click here to login</a>
+</center>
+</body>
+</html>
